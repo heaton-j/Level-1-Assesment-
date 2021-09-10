@@ -51,29 +51,10 @@ def definitions():
          print("You will not get the definitions of your names")
 definitions()
 
-#Print out final names for user to see
+#print out final names for user to see
+
 def final_names():
-    print("Gender = {}".format(gender))
-    print("Category = {}".format(category))
-if gender = boy, category = unique
-       PRINT(names_list[0, 3]):
-gender = boy, category = traditional
-       PRINT(names_list[4, 8]):
-gender = boy, category = popular
-       PRINT(names_list[9, 13]):
-gender = girl, category = unique
-          PRINT(names_list[14, 19]):
-gender = girl, category = traditional
-         PRINT(names_list[20, 24]):
-gender = girl, category = popular
-        PRINT(names_list[25, 30]):
-gender = unisex, category = unique
-        PRINT(names_list[
-gender = unisex, category = traditional
-    PRINT(names_list[
-gender = unisex, category = popular
-    PRINT (names_list[
-
+    if user_gender = "Girl"
+    if user_gender = "Popular"
+    print(names_list[0,4])
 final_names()
-
-
