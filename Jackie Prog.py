@@ -6,8 +6,10 @@ def gender():
     user_gender = input("What gender would you like?")
     if user_gender in gender_list:
         print("The gender you picked is {}".format(user_gender))
+        return user_gender
     else:
         print("Your previous input is not available, These are the options available {}".format(gender_list))
+        gender()
 gender()
 
 #Find type of name
@@ -18,9 +20,11 @@ def category():
     user_category = input("What category would you like?")
     if user_category in category_list:
         print("The category you picked is {}".format(user_category))
+        return user_category
     else:
         print("Your previous input is not available")
         print("these are the options available {}".format(category_list))
+        category()
 category()
 
 #List all possible names + definitions
@@ -53,8 +57,6 @@ definitions()
 
 #print out final names for user to see
 
-def final_names():
-    if user_gender = "Girl"
-    if user_gender = "Popular"
-    print(names_list[0,4])
-final_names()
+user_gender = "Girl", user_category = "Popular":
+    print(names_list[4,9])
+
