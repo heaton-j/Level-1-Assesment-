@@ -6,7 +6,7 @@ def gender():
     user_gender = input("What gender would you like?")
     if user_gender in gender_list:
         print("The gender you picked is {}".format(user_gender))
-        return user_gender
+        user_gender = gender
     else:
         print("Your previous input is not available, These are the options available {}".format(gender_list))
         gender()
@@ -27,23 +27,45 @@ def category():
         category()
 category()
 
-#List all possible names + definitions
+#List all possible names
 
-names_list = [
-"Felix", "Jasper", "Kenji", "Asnee", "Arthur", "James", "William", "Fredrick", "Vincent", "Jack",
-"Lucas", "Oliver", "Liam", "Michael", "Annalise", "Genevieve", "Willow", "Hana", "Mei", "Iris", "Elizabeth", "Victoria",
-"Charlotte", "Marie", "Audrey", "Ava", "Emma", "Sarah", "Evelyn", "Bella", "Luna",  "Aspen",  "Phoenix", "Lumi", "Nico",
-"Armani", "Hura", "Azure", "Harper", "Jamie", "Alex", "Sam", "Freddie", "Riley"
-]
+boy_unique = ["Felix", "Jasper", "Kenji", "Asnee"]
 
-definitions_list = [
-"Happy", "Treasurer", "Strong", "Lightning", "Bear or Thor,the eagle", "Hebrew origin of ‘Jacob’", "Supplanter",
-"Resolute protection", "Peaceful ruler", "Conquer", "Supplanter", "Bright, Shining", "Peaceful",
-"Strong-willed warrior", "Who is like God?", "Graced with God's bounty", "Woman of the race",
-"Freedom", "Flower", "Beautiful", "Rainbow", "Gift of God", "Victory", "Free", "Star of the sea",
-"Noble strength", "Life", "Princess", "Wished for child", "Beautiful", "Moon", "Quaking tree", "Blood red",
-"Snow", "People of victory"
-]
+boy_traditional = ["Arthur", "James", "William", "Fredrick", "Vincent"]
+
+boy_popular = ["Jack","Lucas", "Oliver", "Liam", "Michael"]
+
+girl_unique = ["Annalise", "Genevieve", "Willow", "Hana", "Mei", "Iris"]
+
+girl_traditional = ["Elizabeth", "Victoria","Charlotte", "Marie", "Audrey"]
+
+girl_popular = ["Ava", "Emma", "Sarah", "Evelyn", "Bella", "Luna"]
+
+unisex_unique = ["Aspen",  "Phoenix", "Lumi", "Nico","Armani"]
+
+unisex_traditional = ["Hura", "Dana", "Kennedy"]
+
+unisex_popular = ["Jamie", "Alex", "Sam", "Freddie", "Riley"]
+
+#list all possible definitions
+
+boy_unique_definitions = ["Happy", "Treasurer", "Strong", "Lightning"]
+
+boy_tradtional_definitions = ["Bear or Thor,the eagle", "Supplanter","Resolute protection", "Peaceful ruler", "Conquer"]
+                                                                                
+boy_popular_definitions = ["Supplanter", "Bright, Shining", "Peaceful","Strong-willed warrior", "Who is like God?"]
+
+girl_unique_definitions = ["Graced with God's bounty", "Woman of the race","Freedom", "Flower", "Beautiful", "Rainbow"]
+
+girl_traditional_definitions = ["Gift of God", "Victory", "Free", "Star of the sea", "Noble strength"]
+
+girl_popular_definitions = ["Life", "Life", "Princess", "Wished for child", "Beautiful", "Moon"]
+
+unisex_unique_definitions = ["Quaking tree", "Blood red","Snow", "People of victory", "Warrior"]
+
+unisex_traditional_definitions = ["Misshapen head", "Generosity", "Free woman"]
+
+unisex_popular_definitions = ["Supplanter", "Warrior", "Told by God", "Peace Ruler", "Valiant"]
 
 #Ask user if they want to see the definition of the names
 
@@ -57,6 +79,27 @@ definitions()
 
 #print out final names for user to see
 
-user_gender = "Girl", user_category = "Popular":
-    print(names_list[4,9])
+def final_names():
+    if user_gender == 'Girl':
+        if user_category == 'Unique':
+            print(girl_unique)
+        elif user_category == 'Traditional':
+            print(girl_traditional)
+        elif user_category == 'Popular':
+            print(girl_popular)
+    if user_gender == 'Boy':
+        if user_category == 'Unique':
+            print(boy_unique)
+        elif user_category == 'Traditional':
+            print(boy_traditional)
+        elif user_category == 'Popular':
+            print(boy_popular)
+    if user_gender == 'Unisex':
+        if user_category == 'Unique':
+            print(unisex_unique)
+        elif user_category == 'Traditional':
+            print(unisex_traditional)
+        elif user_category == 'Popular':
+            print(unisex_popular)
 
+final_names()
