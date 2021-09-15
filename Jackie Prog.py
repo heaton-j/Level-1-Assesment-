@@ -6,11 +6,13 @@ def gender():
     user_gender = input("What gender would you like?")
     if user_gender in gender_list:
         print("The gender you picked is {}".format(user_gender))
-        user_gender = gender
+        return user_gender
     else:
         print("Your previous input is not available, These are the options available {}".format(gender_list))
         gender()
 gender()
+
+
 
 #Find type of name
 category_list = ["Popular", "Traditional", "Unique"]
@@ -80,26 +82,25 @@ definitions()
 #print out final names for user to see
 
 def final_names():
-    if user_gender == 'Girl':
-        if user_category == 'Unique':
+    if user_gender == "Girl":
+        if user_category == "Unique":
             print(girl_unique)
-        elif user_category == 'Traditional':
+        elif user_category == "Traditional":
             print(girl_traditional)
-        elif user_category == 'Popular':
+        elif user_category == "Popular":
             print(girl_popular)
-    if user_gender == 'Boy':
-        if user_category == 'Unique':
+    if user_gender == "Boy":
+        if user_category == "Unique":
             print(boy_unique)
-        elif user_category == 'Traditional':
+        elif user_category == "Traditional":
             print(boy_traditional)
-        elif user_category == 'Popular':
+        elif user_category == "Popular":
             print(boy_popular)
-    if user_gender == 'Unisex':
-        if user_category == 'Unique':
+    if user_gender == "Unisex":
+        if user_category == "Unique":
             print(unisex_unique)
-        elif user_category == 'Traditional':
+        elif user_category == "Traditional":
             print(unisex_traditional)
-        elif user_category == 'Popular':
+        elif user_category == "Popular":
             print(unisex_popular)
-
 final_names()
