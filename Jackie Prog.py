@@ -1,4 +1,4 @@
-#Find the gender
+# Find the gender
 gender_list = ["Boy", "Girl", "Unisex"]
 
 def gender():
@@ -12,7 +12,7 @@ def gender():
         gender()
 User_Gender = gender()
 
-#Find type of name
+# Find type of name
 category_list = ["Popular", "Traditional", "Unique"]
 
 def category():
@@ -26,7 +26,7 @@ def category():
         category()
 User_Category = category()
 
-#List all possible names
+# List all possible names
 
 boy_unique = ["Felix", "Jasper", "Kenji", "Asnee"]
 
@@ -46,7 +46,7 @@ unisex_traditional = ["Hura", "Dana", "Kennedy"]
 
 unisex_popular = ["Jamie", "Alex", "Sam", "Freddie", "Riley"]
 
-#list all possible definitions
+# list all possible definitions
 
 boy_unique_definitions = ["Happy", "Treasurer", "Strong", "Lightning"]
 
@@ -66,7 +66,7 @@ unisex_traditional_definitions = ["Misshapen head", "Generosity", "Free woman"]
 
 unisex_popular_definitions = ["Supplanter", "Warrior", "Told by God", "Peace Ruler", "Valiant"]
 
-#print out final names for user to see
+# print out final names for user to see
 
 def final_names(user_gender, user_category):
     print("These are the names for {} , {}".format(user_gender, user_category))
@@ -93,17 +93,17 @@ def final_names(user_gender, user_category):
             print(unisex_popular)
 final_names(User_Gender, User_Category)
 
-#Ask user if they would like to see the definitions for their names
+# Ask user if they would like to see the definitions for their names
 
 def definitions():
        definition = input("Would you like to see the definitions of your names?")
        if definition == "Yes":
          print("These are the definitions for the following names in order")
        else:
-         print("You will not get the definitions of your names")
+            exit()
 Definition = definitions()
 
-#print out definitions if the user wants to see
+# print out definitions if the user wants to see
 
 def final_definitions(definition, user_gender, user_category):
     if user_gender == "Girl":
@@ -125,6 +125,6 @@ def final_definitions(definition, user_gender, user_category):
             print(unisex_unique_definitions)
         elif user_category == "Popular":
             print(unisex_popular_definitions)
-        elif user_category == "traditional":
+        elif user_category == "Traditional":
             print(unisex_traditional_definitions)
 final_definitions(Definition, User_Gender, User_Category)
