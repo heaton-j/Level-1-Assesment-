@@ -103,7 +103,7 @@ def definitions():
             exit()
 Definition = definitions()
 
-# print out definitions if the user wants to see
+# print out the definitions if user wants to access them
 
 def final_definitions(definition, user_gender, user_category):
     if user_gender == "Girl":
