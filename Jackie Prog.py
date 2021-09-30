@@ -6,12 +6,12 @@ category_list = ["Popular", "Traditional", "Unique"]
 def gender():
     print(gender_list)
     user_gender = input("These are the genders available, What gender would you like to choose?")
-    if user_gender in gender_list:
-        print("The gender you picked is {}".format(user_gender))
-        return user_gender
-    else:
-         print("Your previous input is not available")
-         gender()
+    while user_gender not in gender_list:
+        print("Your previous input is not available")
+        user_gender = input("Please choose a gender from the list")
+    print("The gender you picked is {}".format(user_gender))
+    return user_gender
+
 
 
 
