@@ -3,6 +3,8 @@
 gender_list = ["Boy", "Girl", "Unisex"]
 category_list = ["Popular", "Traditional", "Unique"]
 
+# Find the type of gender the user wants for their name
+
 def gender():
     print(gender_list)
     user_gender = input("These are the genders available, What gender would you like to choose?")
@@ -12,22 +14,16 @@ def gender():
     print("The gender you picked is {}".format(user_gender))
     return user_gender
 
-
-
-
 # Find type of name the user wants for their name
-
-
 
 def category():
     print(category_list)
     user_category = input("What category out of these would you like to choose?")
-    if user_category in category_list:
-        return user_category
-    else:
+    while user_category not in category_list:
         print("Your previous input is not available")
-        category()
-
+        user_category = input("Please choose a category from the list")
+    print("The category you picked is {}".format(user_category))
+    return user_category
 
 # List all possible names
 
@@ -79,7 +75,6 @@ def final_names(user_gender, user_category):
         elif User_Category == "Popular":
             print(unisex_popular)
 
-
 # Ask user if they would like to see the definitions for their names
 
 def definitions():
@@ -88,7 +83,6 @@ def definitions():
          print("These are the definitions for the following names in order")
        else:
             exit()
-
 
 # print out the definitions if user wants to access them
 
@@ -115,8 +109,7 @@ def final_definitions(definition, user_gender, user_category):
         elif User_Category == "Traditional":
             print(unisex_traditional_definitions)
 
-
-#Main
+# Main
 User_Gender = gender()
 print(User_Gender)
 User_Category = category()
