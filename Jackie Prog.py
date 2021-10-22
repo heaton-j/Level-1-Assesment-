@@ -1,17 +1,18 @@
 # Find the gender the user wants for their names
 
-gender_list = ["Boy", "Girl", "Unisex"]
+gender_list = { 1 : "Boy", 2 : "Girl", 3 : "Unisex"}
 category_list = ["Popular", "Traditional", "Unique"]
 
 # Find the type of gender the user wants for their name
 
 def gender():
     print(gender_list)
-    user_gender = input("These are the genders available, What gender would you like to choose?")
-    while user_gender not in gender_list:
+    user_gender = int(input("These are the genders available, What gender would you like to choose?"))
+    while user_gender not in gender_list.keys():
         print("Your previous input is not available")
         user_gender = input("Please choose a gender from the list")
-    print("The gender you picked is {}".format(user_gender))
+    print("The gender you picked is {}".format(gender_list.get(user_gender)))
+
     return user_gender
 
 # Find type of name the user wants for their name
@@ -25,6 +26,7 @@ def category():
     print("The category you picked is {}".format(user_category))
     return user_category
 
+
 # List all possible names
 
 boy_unique = ["Felix", "Jasper", "Kenji", "Asnee"]
@@ -37,7 +39,7 @@ unisex_unique = ["Aspen",  "Phoenix", "Lumi", "Nico","Armani"]
 unisex_traditional = ["Hura", "Dana", "Kennedy"]
 unisex_popular = ["Jamie", "Alex", "Sam", "Freddie", "Riley"]
 
-# list all possible definitions to the names
+# list all possible definitions in correct order to the names
 
 boy_unique_definitions = ["Happy", "Treasurer", "Strong", "Lightning"]
 boy_traditional_definitions = ["Bear or Thor,the eagle", "Supplanter","Resolute protection", "Peaceful ruler", "Conquer"]
@@ -113,6 +115,11 @@ def final_definitions(definition, user_gender, user_category):
 User_Gender = gender()
 print(User_Gender)
 User_Category = category()
+#print(final_names)
 final_names(User_Gender, User_Category)
 Definition = definitions()
 final_definitions(Definition, User_Gender, User_Category)
+
+
+
+
